@@ -35,7 +35,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
           
         if(f.equals("")||f == ""|| s.equals("")||s==""){
         
-            result = "Result: invalid ";
+            result = "Result: --- ";
                  
                 request.setAttribute("result",result);
          getServletContext().getRequestDispatcher("/WEB-INF/arithmeticCalculator.jsp").forward(request,response);
