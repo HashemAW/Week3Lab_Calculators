@@ -31,11 +31,22 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
           request.setAttribute("s",s);
           
             String result = "Result: invalid ";
+            
+        if(f.equals("")&& f == ""&&  s.equals("")&& s==""){
+        
+            result = "Result: --- ";
+                 
+                request.setAttribute("result",result);
+         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticCalculator.jsp").forward(request,response);
+        
+           return;
+            
+        }
           
           
         if(f.equals("")||f == ""|| s.equals("")||s==""){
         
-            result = "Result: --- ";
+            result = "Result: invalid ";
                  
                 request.setAttribute("result",result);
          getServletContext().getRequestDispatcher("/WEB-INF/arithmeticCalculator.jsp").forward(request,response);
